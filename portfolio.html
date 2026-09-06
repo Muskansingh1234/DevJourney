@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Muskan Singh | Frontend Developer</title>
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #111827;
+            background-color: #ffffff;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            width: 100%;
+            background-color: #111827;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        /* Logo */
+
+        .logo {
+            color: white;
+            text-decoration: none;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: #3b82f6;
+        }
+
+
+        /* Navigation */
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #3b82f6;
+        }
+
+
+        /* Resume Button */
+
+        .resume-btn {
+            padding: 11px 22px;
+
+            background-color: #3b82f6;
+            color: white;
+
+            text-decoration: none;
+            border-radius: 6px;
+
+            transition: background-color 0.3s ease;
+        }
+
+        .resume-btn:hover {
+            background-color: #2563eb;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            max-width: 1200px;
+            min-height: calc(100vh - 75px);
+
+            margin: auto;
+            padding: 80px 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 60px;
+        }
+
+
+        /* Hero Content */
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-content .intro {
+            font-size: 20px;
+            color: #4b5563;
+            margin-bottom: 10px;
+        }
+
+        .hero-content h1 {
+            font-size: 30px;
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        .hero-content h2 {
+            font-size: 30px;
+            color: #3b82f6;
+            margin-bottom: 20px;
+        }
+
+        .hero-content .description {
+            max-width: 600px;
+
+            font-size: 18px;
+            line-height: 1.7;
+
+            color: #4b5563;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           HERO BUTTONS
+        ========================= */
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .hero-buttons a {
+            display: inline-block;
+
+            padding: 13px 25px;
+
+            border-radius: 6px;
+
+            text-decoration: none;
+            font-weight: 600;
+
+            transition: all 0.3s ease;
+        }
+
+
+        /* Projects Button */
+
+        .projects-btn {
+            background-color: #3b82f6;
+            color: white;
+        }
+
+        .projects-btn:hover {
+            background-color: #2563eb;
+        }
+
+
+        /* Contact Button */
+
+        .contact-btn {
+            border: 2px solid #3b82f6;
+            color: #3b82f6;
+        }
+
+        .contact-btn:hover {
+            background-color: #3b82f6;
+            color: white;
+        }
+
+
+        /* =========================
+           HERO IMAGE
+        ========================= */
+
+        .hero-image {
+            flex: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 350px;
+            height: 350px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 8px solid #dbeafe;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .hero {
+                gap: 30px;
+                padding: 60px 30px;
+            }
+
+            .hero-content h1 {
+                font-size: 48px;
+            }
+
+            .hero-content h2 {
+                font-size: 25px;
+            }
+
+            .hero-image img {
+                width: 280px;
+                height: 280px;
+            }
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            /* Navbar */
+
+            .container {
+                padding: 18px 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .resume-btn {
+                display: none;
+            }
+
+            .logo {
+                font-size: 24px;
+            }
+
+
+            /* Hero */
+
+            .hero {
+                min-height: auto;
+
+                padding: 60px 20px;
+
+                flex-direction: column;
+                text-align: center;
+
+                gap: 40px;
+            }
+
+            .hero-content {
+                width: 100%;
+            }
+
+            .hero-content .intro {
+                font-size: 18px;
+            }
+
+            .hero-content h1 {
+                font-size: 20px;
+            }
+
+            .hero-content h2 {
+                font-size: 23px;
+            }
+
+            .hero-content .description {
+                font-size: 16px;
+            }
+
+
+            /* Buttons */
+
+            .hero-buttons {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+
+            /* Image */
+
+            .hero-image {
+                width: 100%;
+            }
+
+            .hero-image img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+    background-color: #f8fafc;
+    padding: 100px 30px;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+
+/* Image */
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+
+/* Content */
+
+.about-content {
+    flex: 1;
+}
+
+.section-label {
+    color: #3b82f6;
+    font-size: 18px;
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+.about-content h2 {
+    font-size: 40px;
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.about-content > p {
+    color: #4b5563;
+    font-size: 17px;
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+
+/* About points */
+
+.about-points {
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-point h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.about-point p {
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   ABOUT - TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .about-container {
+        gap: 40px;
+    }
+
+    .about-content h2 {
+        font-size: 32px;
+    }
+
+}
+
+
+/* =========================
+   ABOUT - MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .about {
+        padding: 70px 20px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        height: 300px;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+    .about-content > p {
+        font-size: 16px;
+    }
+
+    .about-points {
+        text-align: left;
+    }
+
+}
+
+/* =========================
+   SKILLS SECTION
+========================= */
+
+.skills {
+    padding: 100px 30px;
+    background-color: #ffffff;
+}
+
+.skills-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* Header */
+
+.skills-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.skills-header .section-label {
+    color: #3b82f6;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skills-header h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.skills-header > p:last-child {
+    color: #6b7280;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   SKILL GRID
+========================= */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Skill Card */
+
+.skill-card {
+    padding: 30px;
+
+    background-color: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Icon */
+
+.skill-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #dbeafe;
+
+    color: #2563eb;
+
+    border-radius: 50%;
+
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/* Card Text */
+
+.skill-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-header h2 {
+        font-size: 34px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .skills {
+        padding: 70px 20px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-header h2 {
+        font-size: 30px;
+    }
+
+    .skills-header > p:last-child {
+        font-size: 16px;
+    }
+
+}
+/* =========================
+   PROJECTS SECTION
+========================= */
+
+.projects {
+    padding: 100px 30px;
+    background-color: #f8fafc;
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =========================
+   PROJECT HEADER
+========================= */
+
+.projects-header {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.projects-header .section-label {
+    color: #3b82f6;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.projects-header h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.projects-header > p:last-child {
+    color: #6b7280;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   PROJECT GRID
+========================= */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+/* =========================
+   PROJECT CARD
+========================= */
+
+.project-card {
+    background-color: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Project Image */
+
+.project-card > img {
+    width: 100%;
+    height: 220px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* Project Content */
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.project-content > p {
+    color: #6b7280;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   TECHNOLOGIES
+========================= */
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+}
+
+.project-tech span {
+    padding: 6px 10px;
+
+    background-color: #dbeafe;
+
+    color: #2563eb;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   PROJECT LINKS
+========================= */
+
+.project-links {
+    display: flex;
+    gap: 15px;
+}
+
+.project-links a {
+    text-decoration: none;
+
+    font-weight: 600;
+
+    color: #2563eb;
+}
+
+.project-links a:hover {
+    color: #1d4ed8;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-header h2 {
+        font-size: 34px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .projects {
+        padding: 70px 20px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-header h2 {
+        font-size: 30px;
+    }
+
+    .projects-header > p:last-child {
+        font-size: 16px;
+    }
+
+}
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact {
+    background: #ffffff;
+    padding: 100px 20px;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header */
+
+.contact-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 60px;
+}
+
+.contact-header h2 {
+    font-size: 36px;
+    margin: 10px 0 15px;
+    color: #222;
+}
+
+.contact-header > p:last-child {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Content */
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+/* Contact Information */
+
+.contact-info h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.contact-info > p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.contact-item {
+    margin-bottom: 25px;
+}
+
+.contact-item h4 {
+    font-size: 17px;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.contact-item p {
+    color: #666;
+}
+
+/* Form */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Button */
+
+.submit-btn {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #1d4ed8;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .contact {
+        padding: 70px 20px;
+    }
+
+    .contact-header h2 {
+        font-size: 30px;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+}
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #111827;
+    color: white;
+    padding: 50px 20px 25px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-logo {
+    margin-bottom: 15px;
+}
+
+.footer-logo .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer-logo .logo span {
+    color: #2563eb;
+}
+
+.footer-text {
+    color: #9ca3af;
+    margin-bottom: 25px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.footer-links a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #2563eb;
+}
+
+.copyright {
+    border-top: 1px solid #374151;
+    padding-top: 25px;
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .footer {
+        padding: 40px 20px 20px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+} 
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="container">
+
+            <!-- Logo -->
+            <a href="#home" class="logo">
+                Your<span>Name</span>
+            </a>
+
+
+            <!-- Navigation -->
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+
+            <!-- Resume -->
+            <a href="#" class="resume-btn">
+                Resume
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <section id="home" class="hero">
+
+
+        <!-- Hero Content -->
+
+        <div class="hero-content">
+
+            <p class="intro">
+                Hi, I'm
+            </p>
+
+            <h1>
+                Muskan Singh
+            </h1>
+
+            <h2>
+                Frontend Developer
+            </h2>
+
+            <p class="description">
+                I build responsive and user-friendly
+                websites and web applications.
+            </p>
+
+
+            <!-- Buttons -->
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="projects-btn">
+                    View Projects
+                </a>
+
+                <a href="#contact" class="contact-btn">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Hero Image -->
+
+        <div class="hero-image">
+
+            <img
+                src="c:\Users\Admin\OneDrive\Desktop\ALL Folder\Photos\photo.jpeg"
+                alt="Muskan Singh"
+            >
+
+        </div>
+
+
+    </section>
+    <section id="about" class="about">
+
+    <div class="about-container">
+
+        <div class="about-image">
+            <img src="about-image.jpg" alt="Working at a desk">
+        </div>
+
+        <div class="about-content">
+
+            <p class="section-label">About Me</p>
+
+            <h2>Passionate About Building Great Web Experiences</h2>
+
+            <p>
+                I'm a frontend developer with a strong interest in
+                creating beautiful, responsive, and user-friendly
+                web applications.
+            </p>
+
+            <p>
+                I enjoy turning ideas into reality using modern
+                web technologies and continuously improving my
+                development skills.
+            </p>
+
+            <div class="about-points">
+
+                <div class="about-point">
+                    <h3>Clean Code</h3>
+                    <p>Writing maintainable and scalable code.</p>
+                </div>
+
+                <div class="about-point">
+                    <h3>Problem Solver</h3>
+                    <p>Enjoying challenges and finding solutions.</p>
+                </div>
+
+                <div class="about-point">
+                    <h3>Team Player</h3>
+                    <p>Communicating and collaborating effectively.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section id="skills" class="skills">
+
+    <div class="skills-container">
+
+        <div class="skills-header">
+            <p class="section-label">My Skills</p>
+
+            <h2>Technologies I Work With</h2>
+
+            <p>
+                Here are some of the technologies and tools
+                I use to build modern web applications.
+            </p>
+        </div>
+
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <div class="skill-icon">HTML</div>
+                <h3>HTML</h3>
+                <p>Building the structure of web pages.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">CSS</div>
+                <h3>CSS</h3>
+                <p>Creating beautiful and responsive designs.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">JS</div>
+                <h3>JavaScript</h3>
+                <p>Adding interactivity and functionality.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">React</div>
+                <h3>React</h3>
+                <p>Building modern user interfaces.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">Git</div>
+                <h3>Git</h3>
+                <p>Version control and collaboration.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">Tailwind</div>
+                <h3>Tailwind CSS</h3>
+                <p>Building interfaces with utility classes.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section id="projects" class="projects">
+
+    <div class="projects-container">
+
+        <div class="projects-header">
+            <p class="section-label">My Projects</p>
+
+            <h2>Things I've Built</h2>
+
+            <p>
+                Here are some of the projects I've worked on
+                while learning and building my development skills.
+            </p>
+        </div>
+
+
+        <div class="projects-grid">
+
+            <!-- Project 1 -->
+            <article class="project-card">
+
+                <img
+                    src="project1.jpg"
+                    alt="Weather application"
+                >
+
+                <div class="project-content">
+
+                    <h3>Weather App</h3>
+
+                    <p>
+                        A responsive weather application that
+                        displays weather information for different
+                        cities.
+                    </p>
+
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="#">Live Demo</a>
+                        <a href="#">GitHub</a>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Project 2 -->
+            <article class="project-card">
+
+                <img
+                    src="project2.jpg"
+                    alt="E-commerce website"
+                >
+
+                <div class="project-content">
+
+                    <h3>E-Commerce Website</h3>
+
+                    <p>
+                        A responsive e-commerce interface with
+                        product cards, navigation and shopping
+                        features.
+                    </p>
+
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="#">Live Demo</a>
+                        <a href="#">GitHub</a>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Project 3 -->
+            <article class="project-card">
+
+                <img
+                    src="project3.jpg"
+                    alt="Task management application"
+                >
+
+                <div class="project-content">
+
+                    <h3>Task Manager</h3>
+
+                    <p>
+                        A simple task management application for
+                        creating, completing and organizing tasks.
+                    </p>
+
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="#">Live Demo</a>
+                        <a href="#">GitHub</a>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+<section id="contact" class="contact">
+    <div class="contact-container">
+
+        <div class="contact-header">
+            <p class="section-label">Contact Me</p>
+            <h2>Let's Work Together</h2>
+            <p>
+                Have a project idea or want to work together?
+                Feel free to get in touch with me.
+            </p>
+        </div>
+
+        <div class="contact-content">
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+
+                <p>
+                    I'm always open to discussing new projects,
+                    ideas, or opportunities.
+                </p>
+
+                <div class="contact-item">
+                    <h4>Email</h4>
+                    <p>muskan@example.com</p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>Location</h4>
+                    <p>India</p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>Social</h4>
+                    <p>GitHub · LinkedIn</p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        rows="6"
+                        placeholder="Write your message..."
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-logo">
+            <a href="#" class="logo">Your<span>Name</span></a>
+        </div>
+
+        <p class="footer-text">
+            Building modern and user-friendly web experiences.
+        </p>
+
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 Muskan Singh. All rights reserved.
+        </p>
+
+    </div>
+</footer>
+
+</body>
+
+</html>
